@@ -301,30 +301,42 @@ Material Colors; source: https://material.io/design/color/the-color-system.html#
   --base-border-radius: 0.3125rem;
   --base-border-size: 0.125rem;
   --base-shadow: rgba(0, 0, 0, 0.1);
+  --base-border-color: rgb(218, 220, 224);
 }
 
 * {
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   font-size: 1rem;
 }
 
-/* ---------- Button styles ---------- */
+/* --------------- Button styles --------------- */
 button,
 .button {
   display: inline-block;
   border: none;
-  border-radius: var(--default-border-radius);
+  border-radius: var(--base-border-radius);
   color: white;
   padding: 10px 20px;
   cursor: pointer;
 }
 
+/* ---------- .button-primary ---------- */
 .button-primary {
   background-color: var(--blue-600);
 }
-
 .button-primary:hover {
   background-color: var(--blue-700);
+}
+
+/* ---------- .button-secondary ---------- */
+.button-secondary {
+  display: inline-block;
+  color: var(--blue-700);
+  border: 1px solid var(--base-border-color);
+  background-color: var(--gray-50);
+}
+.button-secondary:hover {
+  background-color: var(--gray-200);
 }
