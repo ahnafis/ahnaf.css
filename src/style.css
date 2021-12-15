@@ -1,14 +1,14 @@
-/* Importing Roboto font */
+/* ---------- Importing Roboto font ---------- */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-/* Making a font-face for Fira Code */
+/* ---------- Making a font-face for Fira Code ---------- */
 @font-face {
   font-family: "Fira Code";
   src: url("../fonts/FiraCode-Regular.ttf") format("truetype");
 }
 
 :root {
-  /* 
+  /*
   Material Colors; source: https://material.io/design/color/the-color-system.html#tools-for-picking-colors
   */
   /* variant: red */
@@ -303,13 +303,8 @@
   --blue-gray-800: #37474f;
   --blue-gray-900: #263238;
 
-  /* Colors for code block */
-  --code-background: #282c34;
-  --code-foreground: #abb2bf;
-  --code-red: #e06c75;
-
   /* others */
-  --base-border-radius: 0.3125rem;
+  --base-border-radius: 0.25rem;
   --base-border-size: 0.125rem;
   --base-shadow: rgba(0, 0, 0, 0.1);
   --base-border-color: rgb(218, 220, 224);
@@ -328,7 +323,6 @@ body {
 button,
 .button {
   display: inline-block;
-  border: none;
   border-radius: var(--base-border-radius);
   color: white;
   padding: 10px 20px;
@@ -337,10 +331,12 @@ button,
 
 /* ---------- .button-primary ---------- */
 .button-primary {
-  background-color: var(--blue-600);
+  border: 1px solid var(--blue-500);
+  background-color: var(--blue-500);
 }
 .button-primary:hover {
-  background-color: var(--blue-700);
+  border: 1px solid var(--blue-600);
+  background-color: var(--blue-600);
 }
 
 /* ---------- .button-secondary ---------- */
@@ -352,16 +348,4 @@ button,
 }
 .button-secondary:hover {
   background-color: var(--gray-200);
-}
-
-/* ---------- code ---------- */
-/* a style for code blocks */
-code {
-  display: block;
-  font-family: "Fira Code", monospace;
-  background: var(--code-background);
-  color: var(--code-foreground);
-  padding: 0.5rem;
-  border: none;
-  border-radius: var(--base-border-radius);
 }
